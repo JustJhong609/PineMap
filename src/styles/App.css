@@ -1,0 +1,90 @@
+.app {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.map-section {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .map-section {
+    flex: 1;
+    min-height: 60vh;
+  }
+
+  .control-panel {
+    flex: 0 0 auto;
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+}
+
+/* Global Leaflet customizations */
+.leaflet-container {
+  background: #e8f5e9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 11px;
+}
+
+/* Status badge styles */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.status-active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.status-harvesting {
+  background: #fed7aa;
+  color: #92400e;
+}
+
+.status-badge.status-idle {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Accessibility */
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
