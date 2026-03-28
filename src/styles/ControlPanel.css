@@ -1,0 +1,163 @@
+.control-panel {
+  width: 300px;
+  height: 100%;
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #dee2e6;
+  overflow-y: auto;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.panel-header {
+  padding: 20px;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  border-bottom: 2px solid #15803d;
+}
+
+.panel-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title-icon {
+  display: inline-block;
+  font-size: 24px;
+}
+
+.panel-subtitle {
+  font-size: 12px;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 500;
+}
+
+.panel-content {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.panel-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.panel-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.panel-content::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.panel-content::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Farm statistics section */
+.farm-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+  background: #f8fafc;
+}
+
+.stat-item:nth-child(1) {
+  border: 1px solid #e0f2fe;
+}
+
+.stat-item:nth-child(2) {
+  border: 1px solid #fef3c7;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Panel info section */
+.panel-info {
+  padding: 12px;
+  margin: 15px 0;
+  background: #e0f2fe;
+  border-left: 4px solid #0284c7;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #0c4a6e;
+  line-height: 1.5;
+}
+
+.panel-info strong {
+  font-weight: 600;
+}
+
+.panel-footer {
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 11px;
+  color: #94a3b8;
+  border-top: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+/* Scrollbar styling */
+.control-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.control-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.control-panel::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.control-panel::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .control-panel {
+    width: 100%;
+    height: auto;
+    border-left: none;
+    border-top: 2px solid #dee2e6;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .panel-content {
+    max-height: 400px;
+  }
+}
